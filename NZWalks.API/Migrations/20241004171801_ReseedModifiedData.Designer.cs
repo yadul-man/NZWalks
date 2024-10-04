@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NZWalks.API.Data;
 
@@ -11,9 +12,11 @@ using NZWalks.API.Data;
 namespace NZWalks.API.Migrations
 {
     [DbContext(typeof(NZWalksDbContext))]
-    partial class NZWalksDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241004171801_ReseedModifiedData")]
+    partial class ReseedModifiedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,17 +42,17 @@ namespace NZWalks.API.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a5d22f24-d5c4-4b65-8b8e-16447bfa4381"),
+                            Id = new Guid("1fe4ea12-a184-45de-9db5-dc93b19fb886"),
                             Name = "Easy"
                         },
                         new
                         {
-                            Id = new Guid("cc6c55d7-6d9f-40a1-9c9e-8e94e1e5e9bc"),
+                            Id = new Guid("f2537da4-04ce-4b4f-805a-24f7862ac43e"),
                             Name = "Medium"
                         },
                         new
                         {
-                            Id = new Guid("b9b1dabc-dcdc-4b06-b594-b0c4301a5e8d"),
+                            Id = new Guid("290aa1b6-4d23-44cd-94a7-0a5c5d18dbbb"),
                             Name = "Hard"
                         });
                 });
@@ -78,108 +81,108 @@ namespace NZWalks.API.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d7e98812-a5bc-4c97-8d1a-61f8d4a9f6ef"),
+                            Id = new Guid("75f98dac-8892-4586-a7da-78a545d1c40b"),
                             Code = "WGN",
                             Name = "Wellington",
-                            RegionImageUrl = "https://test.com/images/wellington.jpg"
+                            RegionImageUrl = "https://test.com/wellington.jpg"
                         },
                         new
                         {
-                            Id = new Guid("e97a3b1e-fc2a-4739-91a3-6c04f09d26b2"),
+                            Id = new Guid("f7bfb5cf-7919-4c90-9b4d-91de354b4c11"),
                             Code = "AKL",
                             Name = "Auckland",
-                            RegionImageUrl = "https://test.com/images/auckland.jpg"
+                            RegionImageUrl = "https://test.com/auckland.jpg"
                         },
                         new
                         {
-                            Id = new Guid("8c9a74c6-9c90-4b3a-97d5-88a9d70d22f1"),
+                            Id = new Guid("9a5b58c1-d91a-47e3-8101-c03c2f839adf"),
                             Code = "CHC",
                             Name = "Christchurch",
-                            RegionImageUrl = "https://test.com/images/christchurch.jpg"
+                            RegionImageUrl = "https://test.com/christchurch.jpg"
                         },
                         new
                         {
-                            Id = new Guid("c6f1e32c-7a32-4b2e-b7e5-9bcbf7efcb4a"),
+                            Id = new Guid("a4e65b12-c0c3-4bb4-bb4d-1fd61ef6358f"),
                             Code = "HAM",
                             Name = "Hamilton",
-                            RegionImageUrl = "https://test.com/images/hamilton.jpg"
+                            RegionImageUrl = "https://test.com/hamilton.jpg"
                         },
                         new
                         {
-                            Id = new Guid("58e5d0f1-659f-42b4-8b69-bfdcb4708fa5"),
+                            Id = new Guid("5a8ef127-82b4-4721-8d65-6f769eef2b56"),
                             Code = "DUD",
                             Name = "Dunedin",
-                            RegionImageUrl = "https://test.com/images/dunedin.jpg"
+                            RegionImageUrl = "https://test.com/dunedin.jpg"
                         },
                         new
                         {
-                            Id = new Guid("6c0fda6e-555e-4c2d-9d34-412342b74bc2"),
+                            Id = new Guid("dd6f96c3-fbc6-4b43-b89b-8f626d0e18f6"),
                             Code = "QTN",
                             Name = "Queenstown",
-                            RegionImageUrl = "https://test.com/images/queenstown.jpg"
+                            RegionImageUrl = "https://test.com/queenstown.jpg"
                         },
                         new
                         {
-                            Id = new Guid("b61bbcb7-5f43-4e38-9050-15f178e8d4a5"),
+                            Id = new Guid("cfb8f37c-4a45-4cbf-a8ba-11fefdfdfedd"),
                             Code = "RTR",
                             Name = "Rotorua",
-                            RegionImageUrl = "https://test.com/images/rotorua.jpg"
+                            RegionImageUrl = "https://test.com/rotorua.jpg"
                         },
                         new
                         {
-                            Id = new Guid("ec0f60a1-63f8-4901-a63c-0075f812dbf3"),
+                            Id = new Guid("93f7a19c-2e65-4db8-8c6e-0dd25c7bf93d"),
                             Code = "NPR",
-                            Name = "Napier-Hastings",
-                            RegionImageUrl = "https://test.com/images/napier.jpg"
+                            Name = "Napier",
+                            RegionImageUrl = "https://test.com/napier.jpg"
                         },
                         new
                         {
-                            Id = new Guid("16cf9c45-1004-4f04-85bb-bd3ff9a317c3"),
+                            Id = new Guid("e6c4e032-6a19-432b-9466-cc342a7558de"),
                             Code = "TRG",
                             Name = "Tauranga",
-                            RegionImageUrl = "https://test.com/images/tauranga.jpg"
+                            RegionImageUrl = "https://test.com/tauranga.jpg"
                         },
                         new
                         {
-                            Id = new Guid("b69b69c3-8243-4b66-b3c5-4e2dfd0a8cc6"),
+                            Id = new Guid("1b27e9b2-5c2b-49db-9b12-5a36dbd2b789"),
                             Code = "IVC",
                             Name = "Invercargill",
-                            RegionImageUrl = "https://test.com/images/invercargill.jpg"
+                            RegionImageUrl = "https://test.com/invercargill.jpg"
                         },
                         new
                         {
-                            Id = new Guid("fe0b0053-5a7d-49a1-8a38-ea37d4b00725"),
+                            Id = new Guid("b27e9b54-6893-4f5d-83e8-4ad6b4cfae7c"),
                             Code = "NSN",
                             Name = "Nelson",
-                            RegionImageUrl = "https://test.com/images/nelson.jpg"
+                            RegionImageUrl = "https://test.com/nelson.jpg"
                         },
                         new
                         {
-                            Id = new Guid("a30dbd93-1e53-46b4-9c63-f0eabf9cfed2"),
+                            Id = new Guid("8d5e786b-cc43-4b6f-9a6f-c49a4fdfd223"),
                             Code = "PMR",
                             Name = "Palmerston North",
-                            RegionImageUrl = "https://test.com/images/palmerstonnorth.jpg"
+                            RegionImageUrl = "https://test.com/palmerstonnorth.jpg"
                         },
                         new
                         {
-                            Id = new Guid("d0c7f3d2-0370-479f-9c09-98f4e09a2b62"),
+                            Id = new Guid("31c1a2d2-21bc-4b4d-b71b-41f30353aecd"),
                             Code = "NPL",
                             Name = "New Plymouth",
-                            RegionImageUrl = "https://test.com/images/newplymouth.jpg"
+                            RegionImageUrl = "https://test.com/newplymouth.jpg"
                         },
                         new
                         {
-                            Id = new Guid("d55c0882-2436-4b93-9e48-16f6c8df73bb"),
+                            Id = new Guid("c0f1f364-65d6-4f87-96a4-0a2a9783b6c4"),
                             Code = "WHG",
                             Name = "Whangarei",
-                            RegionImageUrl = "https://test.com/images/whangarei.jpg"
+                            RegionImageUrl = "https://test.com/whangarei.jpg"
                         },
                         new
                         {
-                            Id = new Guid("5ee09c8b-8f41-4c9f-bf99-6cf37426e0aa"),
+                            Id = new Guid("d4f7db27-8d6e-4502-912f-f9a61b5d5894"),
                             Code = "GIS",
                             Name = "Gisborne",
-                            RegionImageUrl = "https://test.com/images/gisborne.jpg"
+                            RegionImageUrl = "https://test.com/gisborne.jpg"
                         });
                 });
 
