@@ -7,7 +7,9 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using NZWalks.API.Data;
 using NZWalks.API.Mappings;
+using NZWalks.API.Middlewares;
 using NZWalks.API.Repositories;
+using Serilog;
 using System.Text;
 
 namespace NZWalks.API
@@ -17,6 +19,15 @@ namespace NZWalks.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .WriteTo.File("Logs/NZWalksLogs.txt", rollingInterval: RollingInterval.Minute)
+                .MinimumLevel.Information()
+                .CreateLogger();
+
+            builder.Logging.ClearProviders();
+            builder.Logging.AddSerilog(logger);
 
             builder.Services.AddCors(options =>
             {
@@ -110,6 +121,8 @@ namespace NZWalks.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
 
             app.UseHttpsRedirection();
 
